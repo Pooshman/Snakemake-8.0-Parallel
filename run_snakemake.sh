@@ -10,7 +10,7 @@
 # Run Snakemake
 snakemake --executor slurm \
           --jobs 5 \
-          --use-conda \
           --keep-going \
           --latency-wait 60 \
-          --verbose
+          --verbose \
+          --default-resources "mem_mb=4000"
