@@ -7,10 +7,6 @@
 #SBATCH --job-name=snakemake_run
 #SBATCH --output=slurm_output_%j.txt
 
-# Load conda environment if needed
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate snakemake
-
 # Run Snakemake
 snakemake --executor slurm \
           --jobs 5 \
